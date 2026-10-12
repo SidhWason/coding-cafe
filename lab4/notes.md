@@ -1,8 +1,14 @@
-1)The --global flag applies the configuration system-wide for your entire user account on that computer, storing it in your user profile so you do not have to set it for every individual repository. If you left it out, the configuration would apply only locally to the specific repository directory you are currently standing in (or fail if run outside a repository).
-2)The hidden directory .git appeared. Inside it are Git's internal database and control structures, including the HEAD pointer, local config, objects/ database for storing snapshots/blobs, refs/ for branch/tag references, and hooks/ script templates.
-3)Git offers to track hundreds or thousands of files (especially if a virtual environment like .venv/ is present). The .venv/ folder contains third-party dependencies and library files that you did not write.
-4)All the thousands of untracked files inside the .venv/ folder and other ignored patterns disappeared from the untracked list because Git is now configured to ignore them.
-5)It should be committed because it is a vital configuration file for the project. Collaborators need to share the same ignore rules so their local build scraps don't accidentally get pushed.
-6)It moved from "Changes not staged for commit" (or untracked files) to "Changes to be committed" (staging area). In the three-places model, it moved from the working directory into the staging area (index).
-7)Git printed the root commit hash, summary message, and summary statistics indicating how many files changed and how many insertions/deletions occurred.
-8)They are called the commit hash (or short SHA-1 hash), and they serve as a unique cryptographic identifier to reference, inspect, or checkout that exact historical snapshot.
+1)--global applies settings system-wide to your user account profile. Omitting it makes the setting local to your current repository or causes an error outside one.
+2)The hidden .git directory appears because it starts with a dot. It holds Git’s internal database, object storage, branch references, and configuration files.
+3)Git offers to track hundreds of files, including the .venv/ folder. Those files are third-party libraries and dependencies you did not write.
+4)All thousands of untracked files inside .venv/ disappear from git status. Git actively ignores them based on your rules.
+5).gitignore must be committed because it is a crucial project configuration file. Collaborators need the same rules to prevent pushing unwanted build files.
+6)README.md moved from untracked files to the staging area ("Changes to be committed"). In the three-places model, it moved from the working directory into the index.
+7)Git printed the root commit hash, summary message, and file change statistics. It confirmed how many files changed and total insertions/deletions.
+8)They are called the short commit hash or short SHA-1. They act as unique cryptographic identifiers to quickly reference or checkout that exact historical snapshot.
+9)The four steps are making edits, checking status (git status), staging changes (git add), and recording snapshots (git commit).
+10)README.md is recognized globally by platforms like GitHub as the front-page description window. It automatically renders formatted documentation for project visitors.
+11)gh auth login securely generates and stores an OAuth token on your machine. This authenticates your CLI tool so Git can push without password prompts.
+12)The rendered contents of README.md show up on the front page. GitHub automatically looks for and displays this file as the default project overview.
+13)Running git log --oneline shows pushing did not alter your local history timeline. Pushing simply copies your existing commits up to the remote server.
+14)A private repository safely stores code on GitHub and shares it only with approved collaborators. A non-existent repository has no remote server record or online backup at all.
