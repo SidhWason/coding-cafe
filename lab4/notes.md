@@ -1,0 +1,8 @@
+1)The --global flag applies the configuration system-wide for your entire user account on that computer, storing it in your user profile so you do not have to set it for every individual repository. If you left it out, the configuration would apply only locally to the specific repository directory you are currently standing in (or fail if run outside a repository).
+2)The hidden directory .git appeared. Inside it are Git's internal database and control structures, including the HEAD pointer, local config, objects/ database for storing snapshots/blobs, refs/ for branch/tag references, and hooks/ script templates.
+3)Git offers to track hundreds or thousands of files (especially if a virtual environment like .venv/ is present). The .venv/ folder contains third-party dependencies and library files that you did not write.
+4)All the thousands of untracked files inside the .venv/ folder and other ignored patterns disappeared from the untracked list because Git is now configured to ignore them.
+5)It should be committed because it is a vital configuration file for the project. Collaborators need to share the same ignore rules so their local build scraps don't accidentally get pushed.
+6)It moved from "Changes not staged for commit" (or untracked files) to "Changes to be committed" (staging area). In the three-places model, it moved from the working directory into the staging area (index).
+7)Git printed the root commit hash, summary message, and summary statistics indicating how many files changed and how many insertions/deletions occurred.
+8)They are called the commit hash (or short SHA-1 hash), and they serve as a unique cryptographic identifier to reference, inspect, or checkout that exact historical snapshot.
